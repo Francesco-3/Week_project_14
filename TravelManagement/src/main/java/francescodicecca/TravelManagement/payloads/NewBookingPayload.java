@@ -2,6 +2,7 @@ package francescodicecca.TravelManagement.payloads;
 
 import lombok.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -10,6 +11,6 @@ import java.time.LocalDate;
 public class NewBookingPayload {
     private LocalDate requestDate;
     private String notes;
-    private Long employeeId;
-    private Long tripId;
+    private UUID employeeId;
+    private UUID tripId;
 }
