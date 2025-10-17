@@ -31,10 +31,10 @@ public class EmployeeService {
         employee.setName(payload.getName());
         employee.setSurname(payload.getSurname());
         employee.setEmail(payload.getEmail());
-        //employee.setAvatar_url(cloudinaryUploader);
+        employee.setAvatarUrl(payload.getAvatarUrl());
 
         log.info("Dipendente " + employee.getUsername() + " è stato salvato correttamente!");
-        return employee;
+        return employeeRepository.save(employee);
     }
 
     //READ

@@ -22,9 +22,10 @@ public class TripService {
         Trip trip = new Trip();
         trip.setDate(payload.getDate());
         trip.setDestination(payload.getDestination());
+        trip.setStatus(TripStatus.IN_PROGRESS);
 
-        log.info("Dipendente " + trip.getDestination() + " è stato salvato correttamente!");
-        return trip;
+        log.info("Il viaggio per " + trip.getDestination() + " è stato salvato correttamente!");
+        return tripRepository.save(trip);
     }
 
     //READ

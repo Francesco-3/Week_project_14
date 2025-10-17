@@ -23,5 +23,5 @@ public class Trip {
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)
-    private TripStatus status;
+    private TripStatus status = TripStatus.IN_PROGRESS;
 }

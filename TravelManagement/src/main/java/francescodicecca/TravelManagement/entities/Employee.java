@@ -21,7 +21,9 @@ public class Employee {
     private String username;
 
     private String name;
+
+    @Column(unique = true)
     private String surname;
     private String email;
-    private String avatar_url;
+    private String avatarUrl;
 }
